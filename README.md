@@ -1,21 +1,30 @@
 # CAFIE: Counterfactually Aware Fair InferencE
 
 
+## Setup-
+```bash
+pip install requirements.txt
+```
+
 ## Metrics-
 1. StereoSet
+```bash
+stereoset_scoring.py
+```
 2. CrowS-Pairs
-3. BOLD
-4. Fluency
+```bash
+crows_scoring.py
+```
+4. BOLD
+```bash
+bold_batched_scoring.py
+bold_get_scores.py
+```
+6. Fluency
+```bash
+fluency_scoring.py
+```
 
-### Run on StereoSet-
-Run stereoset_scoring.py
-
-### Run on CrowS-Pairs-
-Run crows_scoring.py
-
-### Run on BOLD-
-Run bold_batched_scoring.py
-Run bold_get_scores.py
-
-### Run on Fluency-
-Run fluency_scoring.py
+## Free form generation-
+```bash
+```
