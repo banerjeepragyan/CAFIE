@@ -1,12 +1,15 @@
 # CAFIE: Counterfactually Aware Fair InferencE
 
 
-## Setup-
+## Setup
+All requirements can be found in ```requirements.txt```. All packages can be installed by running
 ```bash
 pip install requirements.txt
 ```
+Counterfactual word lists are on ```act.txt```, ```cnt.txt```, and ```cnt2.txt```. These lists can be modified as and when required for more flexibility on debiasing. The following metrics have been used in the paper. Hyperparameters ```alpha``` and ```lambda``` and the vanilla model can be changed by changing the relevant command line arguments. 
 
-## Metrics-
+## Metrics and Experiments
+CAFIE can be evaluated on each of the metrics using-
 1. StereoSet
 ```bash
 python stereoset_scoring.py
@@ -25,7 +28,8 @@ python bold_get_scores.py
 python fluency_scoring.py
 ```
 
-## Free form generation-
+## Free form generation
+CAFIE can be used for free form generation using
 ```bash
 python generation.py
 ```
