@@ -9,22 +9,23 @@ pip install requirements.txt
 ## Metrics-
 1. StereoSet
 ```bash
-stereoset_scoring.py
+python stereoset_scoring.py
 ```
 2. CrowS-Pairs
 ```bash
-crows_scoring.py
+python crows_scoring.py
 ```
 4. BOLD
 ```bash
-bold_batched_scoring.py
-bold_get_scores.py
+python bold_batched_scoring.py
+python bold_get_scores.py
 ```
 6. Fluency
 ```bash
-fluency_scoring.py
+python fluency_scoring.py
 ```
 
 ## Free form generation-
 ```bash
+python generation.py
 ```
