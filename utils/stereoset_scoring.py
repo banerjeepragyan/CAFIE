@@ -5,7 +5,7 @@ import torch
 from pt_model import GPT2PromptTuningLM
 import pandas as pd
 import sys
-sys.path.append('../')
+sys.path.append('../../')
 
 from bias_bench.benchmark.scoring import ScoringRunner
 from scoring import ScoringAlgo

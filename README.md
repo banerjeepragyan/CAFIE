@@ -11,7 +11,7 @@ Counterfactual word lists are on ```act.txt```, ```cnt.txt```, and ```cnt2.txt``
 ## Metrics and Experiments
 To evaluate CAFIE on StereoSet, run
 ```bash
-python stereoset_scoring.py
+python utils/stereoset_scoring.py
 ```
 
 ## Free form generation
