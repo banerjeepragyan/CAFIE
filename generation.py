@@ -73,5 +73,4 @@ def generator(prompt, max_new_tokens=10):
     return gen_sent
 
 prompt = "Two boys start a"
-print()
 print(generator(prompt))
