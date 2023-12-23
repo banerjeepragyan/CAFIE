@@ -16,7 +16,7 @@ parser.add_argument(
 )
 parser.add_argument(
     "--model_name",
-    default="gpt2"
+    default="gpt2-large"
 )
 
 args = parser.parse_args()
