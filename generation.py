@@ -25,6 +25,7 @@ parser.add_argument(
 )
 parser.add_argument(
     "--model_name",
+    default="gpt2"
 )
 
 
@@ -46,15 +47,15 @@ tokenizer.padding_side = "left"
 male_words = []
 female_words = []
 fw2 = []
-male_word_path = ""
+male_word_path = "list_1.txt"
 with open(male_word_path, "r") as f:
     for line in f:
         male_words.append(line[:-1])
-female_word_path = ""
+female_word_path = "list_2.txt"
 with open(female_word_path, "r") as f:
     for line in f:
         female_words.append(line[:-1])
-female_word_path = ""
+female_word_path = "list_3.txt"
 with open(female_word_path, "r") as f:
     for line in f:
         fw2.append(line[:-1])

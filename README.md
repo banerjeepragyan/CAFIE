@@ -4,7 +4,7 @@
 ## Setup
 All requirements can be found in ```requirements.txt```. All packages can be installed by running
 ```bash
-pip install requirements.txt
+pip install -r requirements.txt
 ```
 Counterfactual word lists are on ```list_1.txt```, ```list_2.txt```, and ```list_3.txt```. These lists can be modified as and when required for more flexibility on debiasing. The following metrics have been used in the paper. Hyperparameters ```alpha``` and ```lambda``` and the vanilla model can be changed by changing the relevant command line arguments. 
 
