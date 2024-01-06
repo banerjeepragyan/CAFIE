@@ -8,8 +8,8 @@ from accelerate import init_empty_weights, load_checkpoint_and_dispatch
 import sys
 sys.path.append('../../')
 
-from biasbench.bias_bench.debias.self_debias.modeling import GPT2Wrapper, AutoWrapper
-from biasbench.bias_bench.debias.self_debias.modeling import MaskedLMWrapper
+from biasbench.debias.self_debias.modeling import GPT2Wrapper, AutoWrapper
+from biasbench.debias.self_debias.modeling import MaskedLMWrapper
 
 import os
 # os.environ['CUDA_VISIBLE_DEVICES'] = '0,1,2,3'

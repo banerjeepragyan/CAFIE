@@ -8,8 +8,8 @@ import random
 import math
 import sys
 sys.path.append('../../')
-from biasbench.bias_bench.benchmark.scoring import dataloader
-from biasbench.experiments.scoring_old import ScoringAlgo
+from biasbench.benchmark.scoring import dataloader
+from biasbench.experiments.scoring import ScoringAlgo
 # seed = 0
 # torch.manual_seed(seed)
 # torch.cuda.manual_seed_all(seed)
@@ -57,7 +57,7 @@ class ScoringRunner:
         alpha_ratio,
         softmax_temperature,
         model_name_or_path,
-        input_file="data/bias.json",
+        input_file= "data/test.json",    #"data/bias.json",
         batch_size=1,
         max_seq_length=128,
         is_generative=False,
@@ -223,23 +223,23 @@ class ScoringRunner:
         fw2 = []
         female_words_2 = []
         # print(device)
-        male_word_path = ""
+        male_word_path = "D:\Documents\IIT-Guwahati\Internships\Adobe\AAAI\CAFIE\list_1.txt"
         with open(male_word_path, "r") as f:
             for line in f:
                 male_words.append(line[:-1])
-        female_word_path = ""
+        female_word_path = "D:\Documents\IIT-Guwahati\Internships\Adobe\AAAI\CAFIE\list_2.txt"
         with open(female_word_path, "r") as f:
             for line in f:
                 female_words.append(line[:-1])
-        female_word_path = ""
+        female_word_path = "D:\Documents\IIT-Guwahati\Internships\Adobe\AAAI\CAFIE\list_3.txt"
         with open(female_word_path, "r") as f:
             for line in f:
                 fw2.append(line[:-1])
-        male_word_path2 = ""
+        male_word_path2 = "D:\Documents\IIT-Guwahati\Internships\Adobe\AAAI\CAFIE\list_1.txt"
         with open(male_word_path2, "r") as f:
             for line in f:
                 male_words_2.append(line[:-1])
-        female_word_path2 = ""
+        female_word_path2 = "D:\Documents\IIT-Guwahati\Internships\Adobe\AAAI\CAFIE\list_2.txt"
         with open(female_word_path2, "r") as f:
             for line in f:
                 female_words_2.append(line[:-1])

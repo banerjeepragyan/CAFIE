@@ -10,7 +10,7 @@ import numpy as np
 import sys
 sys.path.append('../')
 
-from bias_bench.benchmark.stereoset import dataloader
+from biasbench.benchmark.stereoset import dataloader
 
 
 thisdir = os.path.dirname(os.path.realpath(__file__))
