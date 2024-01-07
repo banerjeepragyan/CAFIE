@@ -101,31 +101,31 @@ class ScoringRunner:
         else:
             model = self._intrasentence_model.to(device)
 
-        male_words = []
-        female_words = []
-        male_words_2 = []
-        fw2 = []
-        female_words_2 = []
-        male_word_path = "data\word_lists\list_1.txt"
-        with open(male_word_path, "r") as f:
+        w1_words = []
+        w2_words = []
+        w1_words_2 = []
+        w3_words = []
+        w2_words_2 = []
+        w1_word_path = "data\word_lists\list_1.txt"
+        with open(w1_word_path, "r") as f:
             for line in f:
-                male_words.append(line[:-1])
-        female_word_path = "data\word_lists\list_2.txt"
-        with open(female_word_path, "r") as f:
+                w1_words.append(line[:-1])
+        w2_word_path = "data\word_lists\list_2.txt"
+        with open(w2_word_path, "r") as f:
             for line in f:
-                female_words.append(line[:-1])
-        female_word_path = "data\word_lists\list_3.txt"
-        with open(female_word_path, "r") as f:
+                w2_words.append(line[:-1])
+        w3_word_path = "data\word_lists\list_3.txt"
+        with open(w3_word_path, "r") as f:
             for line in f:
-                fw2.append(line[:-1])
-        male_word_path2 = "data\word_lists\list_1.txt"
-        with open(male_word_path2, "r") as f:
+                w3_words.append(line[:-1])
+        w1_word_path2 = "data\word_lists\list_1.txt"
+        with open(w1_word_path2, "r") as f:
             for line in f:
-                male_words_2.append(line[:-1])
-        female_word_path2 = "data\word_lists\list_2.txt"
-        with open(female_word_path2, "r") as f:
+                w1_words_2.append(line[:-1])
+        w2_word_path2 = "data\word_lists\list_2.txt"
+        with open(w2_word_path2, "r") as f:
             for line in f:
-                female_words_2.append(line[:-1])
+                w2_words_2.append(line[:-1])
 
         # Load the dataset.
         stereoset = dataloader.StereoSet(self._input_file)
@@ -181,11 +181,11 @@ class ScoringRunner:
                             softmax_temperature=self.temperature,
                             prompt=sentence.sentence,
                             context=context,
-                            act1=male_words,
-                            act2=male_words_2,
-                            ct2 = fw2,
-                            cnt1=female_words,
-                            cnt2=female_words_2,
+                            l1=w1_words,
+                            act2=w1_words_2,
+                            l3 = w3_words,
+                            l2=w2_words,
+                            cnt2=w2_words_2,
                             sent_len=1,
                             batch_size=1,
                             max_seq_length=128,

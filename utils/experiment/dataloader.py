@@ -1,6 +1,5 @@
 import json
 import string
-from tqdm import tqdm
 
 class IntrasentenceLoader(object):
     """Loads dataset containing StereoSet intrasentence examples."""

@@ -22,7 +22,7 @@ runner = ScoringRunner(
     is_generative=True,
     is_self_debias=False,
     context_type = 'n', #'ab', 'rb', 'fill'
-    bias_types_to_run = ['religion']
+    bias_types_to_run = ['gender', 'religion']
 )
 results = runner()
 path = "utils\experiment\outputs\\res.json"

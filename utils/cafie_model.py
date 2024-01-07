@@ -22,9 +22,9 @@ class ScoringAlgo:
         softmax_temperature,
         prompt,
         context,
-        act1,
-        cnt1,
-        ct2,
+        l1,
+        l2,
+        l3,
         act2=[],
         cnt2=[],
         sent_len=10,
@@ -50,10 +50,10 @@ class ScoringAlgo:
         self.temperature = softmax_temperature
         self.prmpt = prompt
         self.cntxt = context
-        self.w1_words = act1
+        self.w1_words = l1
         self.w1_words_2 = act2
-        self.w2_words = cnt1
-        self.w3_wrds2 = ct2
+        self.w2_words = l2
+        self.w3_wrds2 = l3
         self.w2_words_2 = cnt2
         self.sl = sent_len
         self.gma = gamma
