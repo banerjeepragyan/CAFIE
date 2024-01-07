@@ -2,7 +2,7 @@ from transformers import AutoModelForCausalLM, AutoTokenizer
 import sys
 sys.path.append('../')
 import argparse
-from biasbench.experiments.scoring import ScoringAlgo
+from utils.cafie_model import ScoringAlgo
 
 parser = argparse.ArgumentParser(description="")
 
@@ -16,7 +16,7 @@ parser.add_argument(
 )
 parser.add_argument(
     "--model_name",
-    default="gpt2-large"
+    default="gpt2"
 )
 
 args = parser.parse_args()
@@ -29,15 +29,15 @@ tokenizer.padding_side = "left"
 list_1_words = []
 list_2_words = []
 list_3_words = []
-word_path = "list_1.txt"
+word_path = "data\word_lists\list_1.txt"
 with open(word_path, "r") as f:
     for line in f:
         list_1_words.append(line[:-1])
-word_path = "list_2.txt"
+word_path = "data\word_lists\list_2.txt"
 with open(word_path, "r") as f:
     for line in f:
         list_2_words.append(line[:-1])
-word_path = "list_3.txt"
+word_path = "data\word_lists\list_3.txt"
 with open(word_path, "r") as f:
     for line in f:
         list_3_words.append(line[:-1])

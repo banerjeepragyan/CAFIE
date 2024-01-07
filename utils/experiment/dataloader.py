@@ -92,7 +92,7 @@ class StereoSet(object):
         Args:
             location (`str`): Location of the StereoSet.json file.
         """
-        location = "D:\Documents\IIT-Guwahati\Internships\Adobe\AAAI\CAFIE\data\\test.json"
+        location = "data\\test.json"
 
         if json_obj == None:
             print("=", location)

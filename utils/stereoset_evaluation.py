@@ -8,9 +8,9 @@ import re
 import numpy as np
 
 import sys
-sys.path.append('../')
+# sys.path.append('../')
 
-from biasbench.benchmark.scoring import dataloader
+from utils.experiment import dataloader
 
 
 thisdir = os.path.dirname(os.path.realpath(__file__))
@@ -241,9 +241,9 @@ if __name__ == "__main__":
             print()
             print(f"Evaluating {prediction_file}...")
             parse_file(
-                f"{args.persistent_dir}/data/stereoset/test.json", prediction_file
+                f"{args.persistent_dir}/data//test.json", prediction_file
             )
     else:
         parse_file(
-            f"{args.persistent_dir}/data/stereoset/test.json", args.predictions_file
+            f"{args.persistent_dir}/data//test.json", args.predictions_file
         )
