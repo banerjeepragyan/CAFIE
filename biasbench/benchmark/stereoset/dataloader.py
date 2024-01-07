@@ -84,7 +84,6 @@ class IntrasentenceLoader(object):
             target_tokens,
         )
 
-
 class StereoSet(object):
     def __init__(self, location, json_obj=None):
         """Instantiates the StereoSet object.
