@@ -10,7 +10,7 @@ sys.path.append('../')
 from biasbench.benchmark.scoring import ScoringRunner
 # from scoring_old import ScoringAlgo
 # from biasbench.model import models
-from biasbench.util import generate_experiment_id, _is_generative
+# from biasbench.util import generate_experiment_id, _is_generative
 import json
 import numpy as np
 import random
@@ -36,7 +36,7 @@ runner = ScoringRunner(
     is_generative=True,
     is_self_debias=False,
     context_type = 'n', #'ab', 'rb', 'fill'
-    bias_types_to_run = ['gender', 'race', 'religion', 'profession']
+    bias_types_to_run = ['religion']
 )
 results = runner()
 print(results)
