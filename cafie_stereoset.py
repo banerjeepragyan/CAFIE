@@ -1,20 +1,6 @@
-import os
-
-from transformers import GPT2Tokenizer, AdamW, get_scheduler, GPT2LMHeadModel
-import torch
-# from pt_model import GPT2PromptTuningLM
-import pandas as pd
-import sys
-# sys.path.append('../')
-
-from utils.experiment import ScoringRunner
-# from scoring_old import ScoringAlgo
-# from biasbench.model import models
-# from biasbench.util import generate_experiment_id, _is_generative
+from transformers import GPT2Tokenizer, GPT2LMHeadModel
 import json
-import numpy as np
-import random
-import os
+from utils.experiment import ScoringRunner
 from utils.stereoset_evaluation import ScoreEvaluator
 
 tokenizer = GPT2Tokenizer.from_pretrained("gpt2")
@@ -39,8 +25,6 @@ runner = ScoringRunner(
     bias_types_to_run = ['religion']
 )
 results = runner()
-print(results)
-# name = "scoring_chk_multi_countr_chk1"
 path = "utils\experiment\outputs\\res.json"
 save_file = open(path, "w")  
 json.dump(results, save_file)  

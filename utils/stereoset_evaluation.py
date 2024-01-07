@@ -4,14 +4,8 @@ import glob
 import json
 import os
 import re
-
 import numpy as np
-
-import sys
-# sys.path.append('../')
-
 from utils.experiment import dataloader
-
 
 thisdir = os.path.dirname(os.path.realpath(__file__))
 parser = argparse.ArgumentParser(
@@ -45,7 +39,6 @@ parser.add_argument(
     default=None,
     help="Path to save the results to.",
 )
-
 
 class ScoreEvaluator:
     def __init__(self, gold_file_path, predictions_file_path):
@@ -107,8 +100,6 @@ class ScoreEvaluator:
             pro_id = self.example2sent[(example.ID, "stereotype")]
             anti_id = self.example2sent[(example.ID, "anti-stereotype")]
             unrelated_id = self.example2sent[(example.ID, "unrelated")]
-            # assert self.id2score[pro_id] != self.id2score[anti_id]
-            # assert self.id2score[unrelated_id] != self.id2score[anti_id]
 
             # Check pro vs anti.
             try:
@@ -184,7 +175,6 @@ class ScoreEvaluator:
         )
         return results
 
-
 def parse_file(gold_file, predictions_file):
     score_evaluator = ScoreEvaluator(
         gold_file_path=gold_file, predictions_file_path=predictions_file
@@ -216,14 +206,12 @@ def parse_file(gold_file, predictions_file):
     with open(output_file, "w+") as f:
         json.dump(d, f, indent=2)
 
-
 def _extract_split_from_file_path(file_path):
     # Parse the experiment ID.
     prediction_file_name = os.path.basename(file_path)
     experiment_id = os.path.splitext(prediction_file_name)[0]
     split = re.match(".*_d-([A-Za-z-]+).*", experiment_id).groups()[0]
     return split
-
 
 if __name__ == "__main__":
     args = parser.parse_args()

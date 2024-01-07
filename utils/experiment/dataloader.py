@@ -2,7 +2,6 @@ import json
 import string
 from tqdm import tqdm
 
-
 class IntrasentenceLoader(object):
     """Loads dataset containing StereoSet intrasentence examples."""
 
@@ -84,7 +83,6 @@ class IntrasentenceLoader(object):
             target_tokens,
         )
 
-
 class StereoSet(object):
     def __init__(self, location, json_obj=None):
         """Instantiates the StereoSet object.
@@ -95,7 +93,6 @@ class StereoSet(object):
         location = "data\\test.json"
 
         if json_obj == None:
-            print("=", location)
             with open(location, "r") as f:
                 self.json = json.load(f)
         else:
@@ -141,7 +138,6 @@ class StereoSet(object):
     def get_intrasentence_examples(self):
         return self.intrasentence_examples
 
-
 class Example(object):
     def __init__(self, ID, bias_type, target, context, sentences):
         """A generic example.
@@ -167,7 +163,6 @@ class Example(object):
         for sentence in self.sentences:
             s += f"{sentence} \r\n"
         return s
-
 
 class Sentence(object):
     def __init__(self, ID, sentence, labels, gold_label):
