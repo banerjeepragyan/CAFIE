@@ -1,4 +1,4 @@
-# CAFIE: Counterfactually Aware Fair InferencE
+# CAFIE: Counterfactually Aware Fair InferencE (AAAI'24)
 
 
 ## Setup
