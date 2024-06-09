@@ -18,3 +18,8 @@ CAFIE can be used for free form generation using
 ```bash
 python generation.py
 ```
+
+If you use our work, please cite using the following:
+```
+Banerjee, P., Java, A., Jandial, S., Shahid, S., Furniturewala, S., Krishnamurthy, B., & Bhatia, S. (2024, March). All Should Be Equal in the Eyes of LMs: Counterfactually Aware Fair Text Generation. In Proceedings of the AAAI Conference on Artificial Intelligence (Vol. 38, No. 16, pp. 17673-17681).
+```
