@@ -1,5 +1,4 @@
-# CAFIE: Counterfactually Aware Fair InferencE (AAAI'24)
-
+# All Should Be Equal in the Eyes of Language Models: Counterfactually Aware Fair Text Generation
 
 ## Setup
 All requirements can be found in ```requirements.txt```. All packages can be installed by running
